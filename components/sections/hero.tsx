@@ -290,8 +290,8 @@ export function Hero() {
             <span className="text-[#ECEBFF] block">
               {t("hero.title").split(" ").slice(0, 2).join(" ")}
             </span>
-            <span className="relative inline-block">
-              <span className="text-gradient-cyan">
+            <span className="relative inline-block pb-2">
+              <span className="text-gradient-cyan pb-2">
                 {t("hero.title").split(" ").slice(2).join(" ") || "The Future"}
               </span>
               {/* Underline glow */}

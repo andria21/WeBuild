@@ -97,8 +97,8 @@ export function About() {
             animate={isInView ? { opacity: 1, y: 0 } : {}}
             transition={{ duration: 0.6, delay: 0.2 }}
           >
-            <span className="text-[#ECEBFF]">{t("about.title").split(' ').slice(0, 2).join(' ')} </span>
-            <span className="text-gradient-cyan">{t("about.title").split(' ').slice(2).join(' ')}</span>
+            <span className="text-[#ECEBFF] pb-2">{t("about.title").split(' ').slice(0, 2).join(' ')} </span>
+            <span className="text-gradient-cyan pb-2">{t("about.title").split(' ').slice(2).join(' ')}</span>
           </motion.h2>
           
           <motion.p

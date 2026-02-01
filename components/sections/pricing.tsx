@@ -73,11 +73,11 @@ export function Pricing() {
   return (
     <section id="pricing" className="py-32 relative overflow-hidden">
       {/* Background */}
-      <div className="absolute inset-0 bg-gradient-to-b from-[#030014] via-[#050520] to-[#030014]" />
+      <div className="absolute inset-0 bg-linear-to-b from-[#030014] via-[#050520] to-[#030014]" />
       
       {/* Animated orbs */}
       <motion.div
-        className="absolute top-1/4 left-1/4 w-[500px] h-[500px] rounded-full"
+        className="absolute top-1/4 left-1/4 w-125 h-125 rounded-full"
         style={{
           background: 'radial-gradient(circle, rgba(123, 92, 255, 0.1) 0%, transparent 70%)',
           filter: 'blur(60px)',
@@ -89,7 +89,7 @@ export function Pricing() {
         transition={{ duration: 8, repeat: Infinity }}
       />
       <motion.div
-        className="absolute bottom-1/4 right-1/4 w-[400px] h-[400px] rounded-full"
+        className="absolute bottom-1/4 right-1/4 w-100 h-100 rounded-full"
         style={{
           background: 'radial-gradient(circle, rgba(0, 240, 255, 0.1) 0%, transparent 70%)',
           filter: 'blur(60px)',
@@ -131,8 +131,8 @@ export function Pricing() {
             animate={isInView ? { opacity: 1, y: 0 } : {}}
             transition={{ duration: 0.6, delay: 0.2 }}
           >
-            <span className="text-[#ECEBFF]">{t("pricing.title").split(' ').slice(0, 1).join(' ')} </span>
-            <span className="text-gradient-cyan">{t("pricing.title").split(' ').slice(1).join(' ')}</span>
+            <span className="text-[#ECEBFF] pb-2">{t("pricing.title").split(' ').slice(0, 1).join(' ')} </span>
+            <span className="text-gradient-cyan pb-2">{t("pricing.title").split(' ').slice(1).join(' ')}</span>
           </motion.h2>
           
           <motion.p
@@ -274,7 +274,7 @@ export function Pricing() {
                     {[...Array(4)].map((_, i) => (
                       <motion.div
                         key={i}
-                        className="absolute w-[1px] h-16"
+                        className="absolute w-px h-16"
                         style={{
                           left: `${15 + i * 25}%`,
                           background: `linear-gradient(to bottom, transparent, ${plan.color}, transparent)`,
@@ -306,7 +306,7 @@ export function Pricing() {
                 <div className="relative flex items-baseline gap-2 mb-4">
                   <motion.span
                     key={`${plan.nameKey}-${pricingMode}`}
-                    className="text-5xl font-bold text-[#ECEBFF]"
+                    className="text-5xl font-bold text-[#ECEBFF] break-all"
                     initial={{ opacity: 0, y: 10 }}
                     animate={{ opacity: 1, y: 0 }}
                     transition={{ duration: 0.3 }}
@@ -330,7 +330,7 @@ export function Pricing() {
                   {plan.features.map((feature) => (
                     <li key={feature} className="flex items-start gap-3">
                       <div 
-                        className="flex-shrink-0 w-5 h-5 rounded-md flex items-center justify-center mt-0.5"
+                        className="shrink-0 w-5 h-5 rounded-md flex items-center justify-center mt-0.5"
                         style={{
                           background: `${plan.color}20`,
                           border: `1px solid ${plan.color}40`,

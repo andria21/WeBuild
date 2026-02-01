@@ -65,7 +65,7 @@ function CircuitLines() {
       {[...Array(5)].map((_, i) => (
         <motion.div
           key={i}
-          className="absolute h-[1px]"
+          className="absolute h-px"
           style={{
             width: '100%',
             top: `${20 + i * 20}%`,
@@ -94,7 +94,7 @@ export function Services() {
   return (
     <section id="services" className="py-32 relative overflow-hidden">
       {/* Background */}
-      <div className="absolute inset-0 bg-gradient-to-b from-[#030014] via-[#050520] to-[#030014]" />
+      <div className="absolute inset-0 bg-linear-to-b from-[#030014] via-[#050520] to-[#030014]" />
       <CircuitLines />
       
       {/* Grid pattern */}
@@ -139,8 +139,8 @@ export function Services() {
             animate={isInView ? { opacity: 1, y: 0 } : {}}
             transition={{ duration: 0.6, delay: 0.2 }}
           >
-            <span className="text-[#ECEBFF]">{t("services.title").split(' ').slice(0, 1).join(' ')} </span>
-            <span className="text-gradient-purple">{t("services.title").split(' ').slice(1).join(' ')}</span>
+            <span className="text-[#ECEBFF] pb-2">{t("services.title").split(' ').slice(0, 1).join(' ')} </span>
+            <span className="text-gradient-purple pb-2">{t("services.title").split(' ').slice(1).join(' ')}</span>
           </motion.h2>
           
           <motion.p
@@ -166,7 +166,7 @@ export function Services() {
               <div 
                 className={`relative h-full p-6 sm:p-8 rounded-2xl overflow-hidden transition-all duration-500 group-hover:-translate-y-1 ${
                   service.isFeatured 
-                    ? 'bg-gradient-to-br from-[#00F0FF]/10 via-[#0A0A1B] to-[#7B5CFF]/10' 
+                    ? 'bg-linear-to-br from-[#00F0FF]/10 via-[#0A0A1B] to-[#7B5CFF]/10' 
                     : 'bg-[#0A0A1B]/80'
                 }`}
                 style={{
@@ -238,7 +238,7 @@ export function Services() {
                     {[...Array(3)].map((_, i) => (
                       <motion.div
                         key={i}
-                        className="absolute w-[1px] h-20"
+                        className="absolute w-px h-20"
                         style={{
                           left: `${25 + i * 25}%`,
                           background: `linear-gradient(to bottom, transparent, ${service.color}, transparent)`,

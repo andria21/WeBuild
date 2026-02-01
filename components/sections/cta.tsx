@@ -13,7 +13,7 @@ function DataStreams() {
       {[...Array(20)].map((_, i) => (
         <motion.div
           key={i}
-          className="absolute w-[1px]"
+          className="absolute w-px"
           style={{
             left: `${5 + i * 5}%`,
             height: '100px',
@@ -39,7 +39,7 @@ function DataStreams() {
 function GlowRing() {
   return (
     <motion.div
-      className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[600px] h-[600px] rounded-full"
+      className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-150 h-150 rounded-full"
       style={{
         border: '1px solid rgba(0, 240, 255, 0.2)',
         boxShadow: '0 0 60px rgba(0, 240, 255, 0.1), inset 0 0 60px rgba(0, 240, 255, 0.05)',
@@ -129,8 +129,8 @@ export function CTA() {
             animate={isInView ? { opacity: 1, y: 0 } : {}}
             transition={{ duration: 0.6, delay: 0.2 }}
           >
-            <span className="text-[#ECEBFF]">{t("cta.title").split(' ').slice(0, 2).join(' ')} </span>
-            <span className="text-gradient-cyan">{t("cta.title").split(' ').slice(2).join(' ')}</span>
+            <span className="text-[#ECEBFF] pb-2">{t("cta.title").split(' ').slice(0, 2).join(' ')} </span>
+            <span className="text-gradient-cyan pb-2">{t("cta.title").split(' ').slice(2).join(' ')}</span>
           </motion.h2>
 
           {/* Subtitle */}
@@ -171,7 +171,7 @@ export function CTA() {
               >
                 {/* Animated shine */}
                 <motion.div
-                  className="absolute inset-0 bg-gradient-to-r from-transparent via-white/30 to-transparent -translate-x-full"
+                  className="absolute inset-0 bg-linear-to-r from-transparent via-white/30 to-transparent -translate-x-full"
                   animate={{ translateX: ["-100%", "200%"] }}
                   transition={{ duration: 2, repeat: Infinity, repeatDelay: 3 }}
                 />

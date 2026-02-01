@@ -92,8 +92,8 @@ export function Process() {
             animate={isInView ? { opacity: 1, y: 0 } : {}}
             transition={{ duration: 0.6, delay: 0.2 }}
           >
-            <span className="text-[#ECEBFF]">{t("process.title").split(' ').slice(0, 2).join(' ')} </span>
-            <span className="text-gradient-purple">{t("process.title").split(' ').slice(2).join(' ')}</span>
+            <span className="text-[#ECEBFF] pb-2">{t("process.title").split(' ').slice(0, 2).join(' ')} </span>
+            <span className="text-gradient-purple pb-2">{t("process.title").split(' ').slice(2).join(' ')}</span>
           </motion.h2>
           
           <motion.p
