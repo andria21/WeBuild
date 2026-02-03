@@ -22,7 +22,7 @@ export function Footer() {
       
       {/* Top border with glow */}
       <div 
-        className="absolute top-0 left-0 right-0 h-[1px]"
+        className="absolute top-0 left-0 right-0 h-px"
         style={{
           background: 'linear-gradient(90deg, transparent, rgba(0, 240, 255, 0.3), rgba(123, 92, 255, 0.3), transparent)',
         }}
@@ -50,7 +50,7 @@ export function Footer() {
         <div className="grid md:grid-cols-4 gap-12 mb-16">
           {/* Brand Column */}
           <div className="md:col-span-2">
-            <motion.a
+            {/* <motion.a
               href="#"
               className="inline-flex items-center gap-2 mb-6 group"
               whileHover={{ scale: 1.02 }}
@@ -61,7 +61,7 @@ export function Footer() {
                 alt="WeBuild Logo"
                 className="h-8 w-auto transition-all group-hover:drop-shadow-[0_0_10px_rgba(0,240,255,0.5)]"
               />
-            </motion.a>
+            </motion.a> */}
             <p className="text-[#7A7A9D] text-sm max-w-sm mb-8 leading-relaxed">
               {t("footer.tagline")}
             </p>
@@ -106,7 +106,7 @@ export function Footer() {
                     transition={{ type: "spring", bounce: 0.2, duration: 0.6 }}
                   />
                 )}
-                <span className="relative z-10">KA</span>
+                <span className="relative z-10">GE</span>
               </button>
             </div>
           </div>
@@ -124,7 +124,7 @@ export function Footer() {
                     href={link.href}
                     className="text-[#7A7A9D] hover:text-[#00F0FF] text-sm transition-all duration-300 inline-flex items-center gap-2 group"
                   >
-                    <span className="w-0 group-hover:w-2 h-[1px] bg-[#00F0FF] transition-all duration-300" />
+                    <span className="w-0 group-hover:w-2 h-px bg-[#00F0FF] transition-all duration-300" />
                     {t(link.key)}
                   </a>
                 </li>
