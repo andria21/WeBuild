@@ -344,7 +344,7 @@ export function Hero() {
                 />
                 <span className="relative flex items-center gap-2">
                   {t("hero.cta.primary")}
-                  <ArrowRight className="w-5! h-10! transition-transform group-hover:translate-x-1" />
+                  {/* <ArrowRight className="w-5! h-10! transition-transform group-hover:translate-x-1" /> */}
                 </span>
               </Button>
             </motion.div>
